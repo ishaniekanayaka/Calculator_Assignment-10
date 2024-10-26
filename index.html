@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f7f7f7;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .calculator{
+            width: 300px;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .display{
+            height: 50px;
+            background-color: palevioletred;
+            text-align: right;
+            font-size: 2em;
+            padding: 0.5em;
+            margin-bottom: 1em;
+            border-radius: 20px;
+            box-sizing: border-box;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<div class="calculator">
+    <div class="display" id="display">0</div>
+</div>
+<div class="button">
+    <button class="btn_operator" onclick="clearDisplay()">C</button>
+    <button class="btn_operator" onclick="appendOperator('/')">/</button>
+    <button class="btn_operator" onclick="appendOperator('*')">*</button>
+    <button class="btn_operator" onclick="deleteLast()">DEL</button>
+
+    <button class="btn number" onclick="appendNumber('7')">7</button>
+    <button class="btn number" onclick="appendNumber('8')">8</button>
+    <button class="btn number" onclick="appendNumber('9')">9</button>
+    <button class="btn operator" onclick="appendOperator('-')">-</button>
+
+    <button class="btn number" onclick="appendNumber('4')">4</button>
+    <button class="btn number" onclick="appendNumber('5')">5</button>
+    <button class="btn number" onclick="appendNumber('6')">6</button>
+    <button class="btn operator" onclick="appendOperator('+')">+</button>
+
+    <button class="btn number" onclick="appendNumber('1')">1</button>
+    <button class="btn number" onclick="appendNumber('2')">2</button>
+    <button class="btn number" onclick="appendNumber('3')">3</button>
+    <button class="btn equal" onclick="calculateResult()">=</button>
+
+    <button class="btn number" onclick="appendNumber('0')" style="grid-column: span 2;">0</button>
+    <button class="btn number" onclick="appendNumber('.')">.</button>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
